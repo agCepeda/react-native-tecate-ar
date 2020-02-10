@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* TecateAr.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* TecateAr.m */; };
+		FA070DDF23F1B6D200228DE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA2483FF23EE7F3000906892 /* Assets.xcassets */; };
+		FA070DE023F1B6D500228DE8 /* ARAssets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FA2483FD23EE7EDA00906892 /* ARAssets.scnassets */; };
 		FA2483C423EE449F00906892 /* ViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2483C323EE449F00906892 /* ViewerViewController.m */; };
 		FA2483F623EE6B8A00906892 /* AnotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2483F423EE6B8A00906892 /* AnotherViewController.swift */; };
 /* End PBXBuildFile section */
@@ -130,6 +132,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA070DDF23F1B6D200228DE8 /* Assets.xcassets in Resources */,
+				FA070DE023F1B6D500228DE8 /* ARAssets.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
