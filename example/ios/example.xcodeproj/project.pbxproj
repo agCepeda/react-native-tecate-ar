@@ -30,8 +30,6 @@
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 		FA2483FC23EE735200906892 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2483FB23EE735200906892 /* Example.swift */; };
 		FA24841323EE95AB00906892 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		FA24841623EE95EE00906892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA24841423EE95EE00906892 /* Assets.xcassets */; };
-		FA24841723EE95EE00906892 /* ARAssets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FA24841523EE95EE00906892 /* ARAssets.scnassets */; };
 		FA24841823EE96A700906892 /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		FA24841923EE983F00906892 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		FA24841A23EE986C00906892 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
@@ -362,8 +360,6 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		FA2483FA23EE735200906892 /* example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "example-Bridging-Header.h"; sourceTree = "<group>"; };
 		FA2483FB23EE735200906892 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
-		FA24841423EE95EE00906892 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FA24841523EE95EE00906892 /* ARAssets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = ARAssets.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -505,8 +501,6 @@
 		13B07FAE1A68108700A75B9A /* example */ = {
 			isa = PBXGroup;
 			children = (
-				FA24841423EE95EE00906892 /* Assets.xcassets */,
-				FA24841523EE95EE00906892 /* ARAssets.scnassets */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -1115,8 +1109,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				FA24841723EE95EE00906892 /* ARAssets.scnassets in Resources */,
-				FA24841623EE95EE00906892 /* Assets.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

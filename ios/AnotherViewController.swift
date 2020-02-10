@@ -85,7 +85,8 @@ import ARKit
     }
     
     func loadImageFromAssets(named: String) -> ARReferenceImage? {
-        guard let image = UIImage(named: named) else { return nil }
+        let bundle = Bundle(for: type(of: self))
+        guard let image = UIImage(named: named, in: bundle, compatibleWith: .none) else { return nil }
         
         let arImage = ARReferenceImage(image.cgImage!, orientation: CGImagePropertyOrientation.up, physicalWidth: 0.15)
         // SET YOUR IMAGE NAME
@@ -100,7 +101,6 @@ import ARKit
 extension AnotherViewController: ARSCNViewDelegate {
     
     func collada2SCNNode(filepath:String) -> SCNNode {
-
         var node = SCNNode()
         let scene = SCNScene(named: filepath)
         var nodeArray = scene!.rootNode.childNodes
@@ -168,8 +168,8 @@ extension AnotherViewController: ARSCNViewDelegate {
         
         return node
     }
+    
     func renderer(_ renderer: SCNSceneRenderer, willUpdate node: SCNNode, for anchor: ARAnchor) {
-        
 //        dragonNode.worldPosition = node.position
         nodeCircle.worldPosition = node.position
         nodeCircle.eulerAngles.x = -.pi / 2
