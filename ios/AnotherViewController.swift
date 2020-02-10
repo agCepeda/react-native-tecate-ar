@@ -17,6 +17,7 @@ import ARKit
     let session = ARSession()
     let updateQueue = DispatchQueue(label: "\(Bundle.main.bundleIdentifier!).serialSCNQueue")
     var dragonNode: SCNNode!
+    var nodeCircle: SCNNode!
     
 
     override func viewDidLoad() {
@@ -65,13 +66,15 @@ import ARKit
     func setupDependencies() {
         guard let referenceImage = loadImageFromAssets(named: "anchor2"),
             let anchor1 = loadImageFromAssets(named: "anchor1"),
-            let anchor3 = loadImageFromAssets(named: "anchor3") else {
+            let anchor3 = loadImageFromAssets(named: "anchor3"),
+            let anchor4 = loadImageFromAssets(named: "anchor4") else {
             fatalError("Missing expected asset catalog resources.")
         }
         var newReferenceImages = Set<ARReferenceImage>();
         newReferenceImages.insert(referenceImage)
         newReferenceImages.insert(anchor1)
         newReferenceImages.insert(anchor3)
+        newReferenceImages.insert(anchor4)
         
         let configuration = ARWorldTrackingConfiguration()
         configuration.maximumNumberOfTrackedImages = 1
@@ -112,17 +115,14 @@ extension AnotherViewController: ARSCNViewDelegate {
 
     }
     
+    func setupCirclePlane() {
+    }
+    
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         guard  anchor is ARImageAnchor else { return }
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        let cubeNode = SCNNode(geometry: SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0))
-        cubeNode.position = SCNVector3(0, -0.3, -0.5) // SceneKit/AR coordinates are in meters
-        //sceneView.scene.rootNode.addChildNode(cubeNode)
-        
-        
-        
 //        // 1
 //        guard let fruitCakeScene = SCNScene(named: "ARAssets.scnassets/dragon/Dragon 2.5_dae.dae") else {
 //            fatalError("Unable to find Dragon 2.5_dae.dae")
@@ -138,31 +138,41 @@ extension AnotherViewController: ARSCNViewDelegate {
         dragonNode.scale = SCNVector3(0.005, 0.005, 0.005)
         dragonNode.position = SCNVector3(0, -0.5, -0.5)
         sceneView.scene.rootNode.addChildNode(dragonNode)
+        
+        let circlePlane = SCNPlane(width: 0.12, height: 0.12)
+        circlePlane.cornerRadius = 0.06
+        circlePlane.firstMaterial?.diffuse.contents = UIColor.orange
+        nodeCircle = SCNNode(geometry: circlePlane)
+        sceneView.scene.rootNode.addChildNode(nodeCircle)
+        
     }
     
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         guard let imageAnchor = anchor as? ARImageAnchor else { return nil }
 
         // create a plane at the exact physical width and height of our reference image
-        let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
-
-        // make the plane have a transparent blue color
-        plane.firstMaterial?.diffuse.contents = UIColor.blue.withAlphaComponent(0.8)
-        
-
-        // wrap the plane in a node and rotate it so it's facing us
-        let planeNode = SCNNode(geometry: plane)
-        planeNode.eulerAngles.x = -.pi / 2
+//        let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
+//
+//        // make the plane have a transparent blue color
+//        plane.firstMaterial?.diffuse.contents = UIColor.blue.withAlphaComponent(0.8)
+//
+//
+//        // wrap the plane in a node and rotate it so it's facing us
+//        let planeNode = SCNNode(geometry: plane)
+//        planeNode.eulerAngles.x = -.pi / 2
 
         // now wrap that in another node and send it back
         let node = SCNNode()
-        node.addChildNode(planeNode)
+        //node.addChildNode(planeNode)
         
         
         return node
     }
     func renderer(_ renderer: SCNSceneRenderer, willUpdate node: SCNNode, for anchor: ARAnchor) {
-        dragonNode.worldPosition = node.position
+        
+//        dragonNode.worldPosition = node.position
+        nodeCircle.worldPosition = node.position
+        nodeCircle.eulerAngles.x = -.pi / 2
     }
     
     func addFoodModelTo(position: SCNNode) {
