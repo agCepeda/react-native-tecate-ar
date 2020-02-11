@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.source_files = "ios/**/*.{h,m,swift,scnassets,xcassets}"
   s.resources = "ios/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
-  spec.resource_bundles = {
+  s.resource_bundles = {
     "resources" => ["ios/**/*.{lproj,storyboard}"]}
   s.requires_arc = true
 
