@@ -12,6 +12,7 @@
 		FA070DE023F1B6D500228DE8 /* ARAssets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FA2483FD23EE7EDA00906892 /* ARAssets.scnassets */; };
 		FA2483C423EE449F00906892 /* ViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2483C323EE449F00906892 /* ViewerViewController.m */; };
 		FA2483F623EE6B8A00906892 /* AnotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2483F423EE6B8A00906892 /* AnotherViewController.swift */; };
+		FABBD7C223F33CB400B8B6CD /* react-native-tecate-ar.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FABBD7C123F33CB400B8B6CD /* react-native-tecate-ar.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		FA2483F423EE6B8A00906892 /* AnotherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherViewController.swift; sourceTree = "<group>"; };
 		FA2483FD23EE7EDA00906892 /* ARAssets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = ARAssets.scnassets; sourceTree = "<group>"; };
 		FA2483FF23EE7F3000906892 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FABBD7C123F33CB400B8B6CD /* react-native-tecate-ar.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "react-native-tecate-ar.podspec"; path = "../react-native-tecate-ar.podspec"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				FABBD7C123F33CB400B8B6CD /* react-native-tecate-ar.podspec */,
 				FA2483FF23EE7F3000906892 /* Assets.xcassets */,
 				FA2483FD23EE7EDA00906892 /* ARAssets.scnassets */,
 				FA2483F423EE6B8A00906892 /* AnotherViewController.swift */,
@@ -133,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA070DDF23F1B6D200228DE8 /* Assets.xcassets in Resources */,
+				FABBD7C223F33CB400B8B6CD /* react-native-tecate-ar.podspec in Resources */,
 				FA070DE023F1B6D500228DE8 /* ARAssets.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

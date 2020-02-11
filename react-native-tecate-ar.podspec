@@ -17,6 +17,9 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/github_account/react-native-tecate-ar.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,swift,scnassets,xcassets}"
+  s.resources = "ios/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+  spec.resource_bundles = {
+    "resources" => ["ios/**/*.{lproj,storyboard}"]}
   s.requires_arc = true
 
   s.dependency "React"

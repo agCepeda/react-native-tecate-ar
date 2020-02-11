@@ -39,9 +39,9 @@
 		FA24841E23EE989200906892 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		FA24841F23EE98A500906892 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		FA24842023EE98B000906892 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		FA24842123EE997A00906892 /* libTecateAr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA24836123EE221900906892 /* libTecateAr.a */; };
 		FA24842223EE9A4200906892 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
 		FA24842323EE9AF400906892 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
+		FABBD78E23F3383B00B8B6CD /* libTecateAr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA24836123EE221900906892 /* libTecateAr.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -325,6 +325,20 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = TecateAr;
 		};
+		FABBD78A23F337F100B8B6CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0702A4CC5D04BA29BE70374 /* TecateAr.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FABBD77A23F3282700B8B6CD;
+			remoteInfo = TecateArModuleTests;
+		};
+		FABBD78C23F337FF00B8B6CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0702A4CC5D04BA29BE70374 /* TecateAr.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 58B511DA1A9E6C8500147676;
+			remoteInfo = TecateAr;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -375,9 +389,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABBD78E23F3383B00B8B6CD /* libTecateAr.a in Frameworks */,
 				FA24842323EE9AF400906892 /* libRCTVibration.a in Frameworks */,
 				FA24842223EE9A4200906892 /* libRCTWebSocket.a in Frameworks */,
-				FA24842123EE997A00906892 /* libTecateAr.a in Frameworks */,
 				FA24842023EE98B000906892 /* libRCTBlob.a in Frameworks */,
 				FA24841F23EE98A500906892 /* libRCTAnimation.a in Frameworks */,
 				FA24841E23EE989200906892 /* libReact.a in Frameworks */,
@@ -641,6 +655,7 @@
 			isa = PBXGroup;
 			children = (
 				FA24836123EE221900906892 /* libTecateAr.a */,
+				FABBD78B23F337F100B8B6CD /* TecateArModuleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -678,6 +693,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FABBD78D23F337FF00B8B6CD /* PBXTargetDependency */,
 			);
 			name = example;
 			productName = "Hello World";
@@ -1094,6 +1110,13 @@
 			remoteRef = FA24836023EE221900906892 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		FABBD78B23F337F100B8B6CD /* TecateArModuleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TecateArModuleTests.xctest;
+			remoteRef = FABBD78A23F337F100B8B6CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1210,6 +1233,11 @@
 			isa = PBXTargetDependency;
 			target = 2D02E47A1E0B4A5D006451C7 /* example-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
+		};
+		FABBD78D23F337FF00B8B6CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TecateAr;
+			targetProxy = FABBD78C23F337FF00B8B6CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

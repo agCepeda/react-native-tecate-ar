@@ -86,6 +86,7 @@ import ARKit
     
     func loadImageFromAssets(named: String) -> ARReferenceImage? {
         let bundle = Bundle(for: type(of: self))
+        print("BUNDLE URL", bundle.resourcePath, bundle.resourcePath)
         guard let image = UIImage(named: named, in: bundle, compatibleWith: .none) else { return nil }
         
         let arImage = ARReferenceImage(image.cgImage!, orientation: CGImagePropertyOrientation.up, physicalWidth: 0.15)
